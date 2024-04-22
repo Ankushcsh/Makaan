@@ -1,0 +1,58 @@
+<%-include('./common/head') %>
+
+    <style>
+        /* Add your custom styles here */
+        .profile-image {
+            border: 2px solid #ccc;
+            border-radius: 10%;
+            max-width: 180px;
+        }
+
+        .bio {
+            font-size: 16px;
+        }
+
+        /* Add more custom styles as needed */
+    </style>
+    </head>
+
+    <body>
+        <div class="container mt-5">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-3 text-center">
+
+                            <img src="http://localhost:4000/images/<%= k[0].image %>" alt="User Profile Image"
+                                class="img-fluid profile-image">
+
+
+
+                        </div>
+                        <div class="col-md-9">
+
+                            <h2 class="card-title">
+                                <%= k[0].Pname %>
+                            </h2>
+
+                            <p class="card-text text-muted">Property Agent</p>
+
+                            <p class="card-text bio">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae justo euismod,
+                                aliquam libero vel, tincidunt elit.
+                            </p>
+                            <ul class="list-unstyled">
+                                <li><strong>Email:</strong> john.doe@example.com</li>
+                                <li><strong>Location:</strong> New York, USA</li>
+                                <li><strong>Website:</strong> <a href="https://www.example.com">www.example.com</a></li>
+                            </ul>
+                            <a href="#" class="btn btn-primary">Edit Profile</a>
+                            <!-- Add social media icons and links here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <%-include('./common/footer') %>

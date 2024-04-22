@@ -1,0 +1,87 @@
+
+
+<%-include('./common/head') %>
+
+<!--       
+
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src="profile-image.jpg" alt="User Profile Image" class="img-fluid rounded-circle">
+                    </div>
+                    <div class="col-md-9">
+                        <h2 class="card-title">John Doe</h2>
+                        <p class="card-text">Web Developer</p>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae justo euismod, aliquam libero vel, tincidunt elit.</p>
+                        <ul class="list-unstyled">
+                            <li><strong>Email:</strong> john.doe@example.com</li>
+                            <li><strong>Location:</strong> New York, USA</li>
+                            <li><strong>Website:</strong> <a href="https://www.example.com">www.example.com</a></li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Edit Profile</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+   
+
+
+    <style>
+        /* Add your custom styles here */
+        .profile-image {
+            border: 2px solid #ccc;
+            border-radius: 10%;
+            max-width: 180px;
+        }
+        .bio {
+            font-size: 16px;
+        }
+        /* Add more custom styles as needed */
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-3 text-center">
+                        <% if(userdata.role == null){ %>
+                        <img src="/image/<%= userdata.img %>" alt="User Profile Image" class="img-fluid profile-image">
+                        <% }else{ %>
+                            <img  src="http://localhost:4000/images/<%=userdata.img %>" alt="User Profile Image" class="img-fluid profile-image">
+                            <% } %>
+                    </div>
+                    <div class="col-md-9">
+                        <h2 class="card-title"><%= userdata.name  %></h2>
+
+                        <% if(userdata.role == 'Owner'){ %>
+                        <p class="card-text text-muted">Property Owner</p>
+                        <% } else if(userdata.role == 'Agent'){%>
+                            <p class="card-text text-muted">Property Agent</p>
+                            <% }else{ %>
+                                <p class="card-text text-muted">User</p>
+                                <% } %>
+                        <p class="card-text bio">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae justo euismod, aliquam libero vel, tincidunt elit.
+                        </p>
+                        <ul class="list-unstyled">
+                            <li><strong>Email:</strong> john.doe@example.com</li>
+                            <li><strong>Location:</strong> New York, USA</li>
+                            <li><strong>Website:</strong> <a href="https://www.example.com">www.example.com</a></li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Edit Profile</a>
+                        <!-- Add social media icons and links here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+ 
+    <%-include('./common/footer') %>
+  
+

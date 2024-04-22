@@ -1,0 +1,21 @@
+<%- include("common/head") %>
+
+
+    <%-include("common/navbar") %>
+
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                ADD Catagory
+            </div>
+            <div class="panel-body">
+                <form role="form" action="/addcatagoryform" method="post">
+                    <div class="form-group">
+                        <label>Property catagory</label>
+                        <input class="form-control" type="text" name="cat">
+                        <p class="help-block">Help text here.</p>
+                    </div>
+                    <button type="submit" class="btn btn-info">SUBMIT </button>
+                </form>
+            </div>
+        </div>
+        <%-include("common/footer") %>

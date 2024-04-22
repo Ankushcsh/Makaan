@@ -1,0 +1,88 @@
+<%- include("common/head") %>
+
+
+    <%-include("common/navbar") %>
+
+
+
+
+
+
+       
+                                
+                        <!-- </thead>
+                        <tbody>
+                            <tr>
+                                <td class="col-3 text-center"></td>
+                                <td class="col-3 text-center">
+                                    
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-3 text-center">Property Image</td>
+                                <td class="col-3 text-center"></td>
+
+                            </tr>
+                            <tr>
+                                <td class="col-3 text-center"></td>
+                                <td class="col-3 text-center">
+                                   
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td class="col-3 text-center">Property Name</td>
+                                <td class="col-3 text-center">
+                                    <%= sd[0].Pname %>
+                                </td> -->
+
+        <!-- End  Basic Table  -->
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Our Agents
+            </div>
+            <div class="panel-body">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Property Titles</th>
+                                <th>Property Data</th>
+                            </tr>
+                        </thead>
+            
+                        <tbody>
+                            <tr>
+                                <td>Property Name </td>
+                                <td><%= sd[0].Pname %> </td>
+                            </tr>
+                            <tr>
+                                <td>Property Image </td>
+                                <td><img src="/images/<%= sd[0].image %>"> </td>
+                            </tr>
+                            <tr>
+                                <td>Address </td>
+                                <td> <%= sd[0].ADDRESS %> </td>
+                            </tr>
+                            <tr>
+                                <td>Price </td>
+                                <td><%= sd[0].Price %>  </td>
+                            </tr>
+                            <tr>  
+                                <td>Property Catagory </td>
+                                <td><%= sd[0].catagory %>  </td>
+                            </tr>
+                           
+                           
+                         
+                         
+                         
+                        </tbody>
+                
+                    </table>
+                </div>
+            </div>
+        </div>
+          <!-- End  Basic Table  -->
+
+        <%-include("common/footer") %>

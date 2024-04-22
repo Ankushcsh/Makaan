@@ -1,0 +1,82 @@
+<%-include('./common/head') %>
+
+    <!-- Contact Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h1 class="mb-3">Log-In</h1>
+                <p>Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd vero ipsum sit eirmod
+                    sit. Ipsum diam justo sed rebum vero dolor duo.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-12">
+                    <div class="row gy-4">
+
+                    </div>
+                </div>
+                <div class="container d-flex align-items-center justify-content-center">
+                    <div class="col-md-6">
+                        <div class="wow fadeInUp" data-wow-delay="0.5s">
+                            <% if(temp_fp==null){ %>
+
+                                <form action="/resetpass" method="post">
+                                    <div class="row g-3">
+
+
+                                        <div class="col-12">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" id="subject"
+                                                    placeholder="Subject" name="email">
+                                                <label for="subject">Enter Email</label>
+                                            </div>
+                                            <% if(queryString.msg=='invalidEmail' ){ %>
+                                                <h7>Invalid Email</h7>
+                                                <% } %>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <button class="btn btn-primary w-100 py-3" type="submit">verify now</button>
+                                        </div>
+                                    </div>
+
+                                </form>
+                                <% }else{ %>
+                                    <form action="/checkotp" method="post">
+                                        <div class="row g-3">
+
+
+                                            <div class="col-12">
+                                                <div class="form-floating">
+                                                    <input type="text" class="form-control" id="subject"
+                                                        placeholder="Subject" name="otp">
+                                                    <label for="subject">Enter OTP</label>
+                                                    <% if(queryString.msg=='invalidotp' ){ %>
+                                                        <h7>Invalid otp</h7>
+                                                        <% } %>
+                                                </div>
+                                                
+                                            </div>
+
+                                            <div class="col-12">
+                                                <button class="btn btn-primary w-100 py-3" type="submit">verify
+                                                    now</button>
+                                            </div>
+                                        </div>
+
+                                    </form>
+                                    <% } %>
+                                
+                                 
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+
+    <%-include('./common/footer') %>

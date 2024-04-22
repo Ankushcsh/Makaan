@@ -1,0 +1,44 @@
+<%- include("common/head") %>
+
+
+    <%-include("common/navbar") %>
+
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            Client Data
+        </div>
+        <div class="panel-body">
+            <form role="form" action="/addclientform" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label>Enter Name</label>
+                    <input class="form-control" type="text" name="cname">
+                    <p class="help-block">Help text here.</p>
+                </div>
+                <div class="form-group">
+                    <label>Enter profession</label>
+                    <input class="form-control" type="text" name="cprofession">
+                    <p class="help-block">Help text here.</p>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input class="form-control" type="text" name="cemail">
+                    <p class="help-block">Help text here.</p>
+                </div>
+            
+                <div class="form-group">
+                    <label>image</label>
+                    <input class="form-control" type="file" name="cimage">
+                    <p class="help-block">photograph</p>
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea class="form-control" rows="3" type="text" name="cdesc"></textarea>
+                </div>
+                <button type="submit" class="btn btn-info">Submit </button>
+    
+            </form>
+        </div>
+    </div>
+
+
+    <%-include("common/footer") %>

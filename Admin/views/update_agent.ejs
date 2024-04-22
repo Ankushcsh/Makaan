@@ -1,0 +1,60 @@
+<%- include("common/head") %>
+
+
+<%-include("common/navbar") %>
+
+<div class="panel panel-info">
+    <div class="panel-heading">
+    Update agent data
+    </div>
+    <div class="panel-body">
+        <form role="form" action="/updateagentdata/<%=sdata[0]._id %>"  method="post"  enctype="multipart/form-data">
+            <div class="form-group">
+                <label>Enter Name</label>
+                <input class="form-control" type="text" name="name" value="<%=sdata[0].name %>" >
+                <p class="help-block">Help text here.</p>
+            </div>
+            <div class="form-group">
+                <label>Enter Email</label>
+                <input class="form-control" type="text" name="desig" value="<%=sdata[0].desig %>" >
+                <p class="help-block">Help text here.</p>
+            </div>
+            <div class="form-group">
+                <label>facebook</label>
+                <input class="form-control" type="text" name="fb" value="<%=sdata[0].fb %>" >
+                <p class="help-block">Help text here.</p>
+            </div>
+           
+            <div class="form-group">
+                <label>instagram</label>
+                <input class="form-control" type="text" name="insta" value="<%=sdata[0].insta %>" >
+                <p class="help-block">Help text here.</p>
+            </div>
+           
+            <div class="form-group">
+                <label>twitter</label>
+                <input class="form-control" type="text" name="tweet" value="<%=sdata[0].tweet %>" >
+                <p class="help-block">Help text here.</p>
+            </div>
+
+            <div class="form-group">
+                <input class="form-control" type="text" name="cimg" value="<%=sdata[0].img %>" >
+            </div>
+         
+            <div class="form-group">
+                <label>image</label>
+                <input class="form-control" type="file" name="img" value="" >
+                <p class="help-block">photograph</p>
+                <img src="/images/<%=sdata[0].img %>">
+            </div>
+           
+           
+
+
+            <button type="submit" class="btn btn-info">Send Message </button>
+
+        </form>
+    </div>
+</div>
+
+<%-include("common/footer") %>

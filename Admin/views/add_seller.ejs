@@ -1,0 +1,76 @@
+
+<%- include("common/head") %>
+
+
+<%-include("common/navbar") %>
+
+
+<div class="panel panel-info">
+    <div class="panel-heading">
+        BASIC FORM
+    </div>
+    <div class="panel-body">
+        <form role="form" action="/addagentform" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label>Enter Name</label>
+                <input class="form-control" type="text" name="name">
+                <p class="help-block">Help text here.</p>
+            </div>
+            <div class="form-group">
+                <label>Property Role</label>
+                <select class="form-control" name="role">
+                    <option value="">Select Role</option>
+                    
+                        <option value="Owner">Owner </option>
+                        <option value="Agent">Agent </option>
+                      
+
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Enter Email</label>
+                <input class="form-control" type="text" name="email">
+                <p class="help-block">Enter Email</p>
+            </div>
+
+            <div class="form-group">
+                <label>Password</label>
+                <input class="form-control" type="text" name="password">
+                <p class="help-block">Enter Password</p>
+            </div>
+           
+            <div class="form-group">
+                <label>facebook</label>
+                <input class="form-control" type="text" name="fb">
+                <p class="help-block">Help text here.</p>
+            </div>
+           
+            <div class="form-group">
+                <label>instagram</label>
+                <input class="form-control" type="text" name="insta">
+                <p class="help-block">Help text here.</p>
+            </div>
+           
+            <div class="form-group">
+                <label>twitter</label>
+                <input class="form-control" type="text" name="tweet">
+                <p class="help-block">Help text here.</p>
+            </div>
+         
+            <div class="form-group">
+                <label>image</label>
+                <input class="form-control" type="file" name="img">
+                <p class="help-block">photograph</p>
+            </div>
+          
+           
+
+
+            <button type="submit" class="btn btn-info">Send Message </button>
+
+        </form>
+    </div>
+</div>
+
+<%-include("common/footer") %>

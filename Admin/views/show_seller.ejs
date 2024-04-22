@@ -1,0 +1,46 @@
+<%- include("common/head") %>
+
+
+<%-include("common/navbar") %>
+
+
+<!--   Basic Table  -->
+<div class="panel panel-default">
+    <div class="panel-heading">
+        Our Agents
+    </div>
+    <div class="panel-body">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>image</th>
+                        <th>Name</th>
+                        <th>Designation</th>
+                        <th>update</th>
+                   
+                    </tr>
+                </thead>
+                <% for(let k of sdata) { %>
+                <tbody>
+                  
+                    <tr>
+                        <td><img style="width: 50px; aspect-ratio: 2/2;" src="images/<%=k.img%>"></td>
+                        <td><%=k.name  %></td>
+                        <td><%=k.desig  %></td>
+                        <td><a href="/updateagent/<%=k._id %>">update</a></td>
+                      
+                     
+                    </tr>
+                 
+                 
+                 
+                </tbody>
+                <% } %>
+            </table>
+        </div>
+    </div>
+</div>
+  <!-- End  Basic Table  -->
+
+<%-include("common/footer") %>

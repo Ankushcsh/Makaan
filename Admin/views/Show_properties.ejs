@@ -1,0 +1,48 @@
+<%- include("common/head") %>
+
+
+<%-include("common/navbar") %>
+
+
+
+                     <!--   Basic Table  -->
+                     <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Basic Table
+                        </div>
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>image</th>
+                                            <th>price</th>
+                                            <th>view</th>
+                                            <th>update</th>
+                                       
+                                        </tr>
+                                    </thead>
+                                    <% for(let k of sd) { %>
+                                    <tbody>
+                                      
+                                        <tr>
+                                            <td><%=k.Pname  %></td>
+                                            <td><img style="width: 60px; aspect-ratio: 2/2;" src="/images/<%= k.image%>" alt=""> </td>
+                                            <td><%=k.Price  %></td>
+                                            <td><a href="/viewprop/<%=k._id %>">view</a></td>
+                                            <td><a href="/updateprop/<%=k._id %>">update</a></td>
+                                         
+                                        </tr>
+                                     
+                                     
+                                     
+                                    </tbody>
+                                    <% } %>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                      <!-- End  Basic Table  -->
+
+<%- include("common/footer") %>
